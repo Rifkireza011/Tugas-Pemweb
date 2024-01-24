@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <h1>Image Picker</h1>
+    <select name="selectanimal" id="selectanimal">
+        <option value="https://i.pinimg.com/474x/7e/15/81/7e1581c0af4d5eb717f6085409e9c050.jpg" selected>Gorilla</option>
+        <option value="https://i.pinimg.com/474x/9d/25/36/9d2536f5f39b3337c7fe50b968dbfb69.jpg">Lumba_lumba</option>
+        <option value="https://i.pinimg.com/474x/a0/57/2d/a0572d7e195072e175c874deaf682b6d.jpg">paus</option>
+        <option value="https://i.pinimg.com/474x/55/49/ef/5549ef078663824a051e93f4f7512885.jpg">Kucing</option>
+        <option value="https://i.pinimg.com/474x/dc/ff/16/dcff16336fd13ab460ea69ec19ae0c97.jpg">Harimau</option>
+    </select>
+    <br>
+    <br>
+    <img src="https://i.pinimg.com/474x/e9/d2/e3/e9d2e30cf94f0b384f8c6f242bdeaa65.jpg" alt="" id="image">
+    <script>
+        const selectanimal = document.getElementById('selectanimal')
+        const image = document.getElementById('image')
+
+        selectanimal.addEventListener('change', chcimg)
+
+        function chcimg() {
+            image.src = selectanimal.value
+        }
+
+        chcimg()
+    </script>
+</body>
+</html>

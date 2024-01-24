@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            border: 1px solid black;
+            height: 32%;
+            width: 20%;
+            position: fixed;
+            left: 50%;
+            top: 10%;
+            transform: translateX(-50%);
+            background-color: #1a1a2e;
+            color: #fff; 
+            padding: 10px;
+        }
+
+        .inp {
+            width: 95%;
+        }
+
+        .chat {
+            width: 100%;
+            height: 180px;
+            background-color: #1a1a2e;
+            overflow-y: auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .message {
+            display: flex;
+        }
+
+        button {
+            width: 30%;
+        }
+    </style>
+
+    <script>
+        function chat() {
+            let elemen, teks, parent, spasi;
+            let inp_chat = document.getElementById("inp_chat").value;
+            elemen = document.createElement("span");
+            spasi = document.createElement("br");
+            teks = document.createTextNode(inp_chat);
+
+            elemen.appendChild(teks);
+
+            parent = document.getElementById("msg_user");
+            parent.appendChild(spasi);
+            parent.appendChild(elemen);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="chat" id="msg_user"></div>
+        <div class="message">
+            <input type="text" class="inp" id="inp_chat" onfocus="this.value=''" />
+            <button onclick="chat()">Kirim</button>
+        </div>
+    </div>
+</body>
+
+</html>

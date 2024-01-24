@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace Pemesanan Barang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #dbe4ee;
+            color: #272727;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #dbe4ee;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        .product-container {
+            display: flex;
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .product-details {
+            flex: 3;
+        }
+
+        .product-details h2 {
+            padding-bottom: 20px;
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .product-details p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .color-picker {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .color-box {
+            width: 35px;
+            height: 35px;
+            margin: 2px;
+            border: 2px solid #fff;
+            cursor: pointer;
+        }
+
+        .color-box:hover {
+            border: 2px solid #000;
+        }
+
+        .product-details select {
+            text-align: center;
+            width: 121px;
+            padding: 5px;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 10px;
+            width: 200px;
+        }
+
+        .product-details input[type="number"] {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+            width: 115px;
+            padding: 5px;
+        }
+
+        .product-details button {
+            margin-top: 10px;
+            background-color: #dbe4ee;
+            color: #272727;
+            padding: 10px 20px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        input[type="button"] {
+            width: 125px;
+            height: 38px;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>REZASTORE</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Kategori</a></li>
+            <li><a href="#">Promo</a></li>
+            <li><a href="#">Belanja</a></li>
+            <li><a href="#">Chat</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-container">
+        <div class="product-image">
+            <h2>Baju Manchester City</h2>
+            <div style="position: relative;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR8ujkcWlrxP0g7QOVgY2W1COJrQiKiCPKkg&usqp=CAU" alt="Nama Barang">
+            <p style="position: absolute; top: 97%; left: 50%; transform: translate(-50%, -50%); background-color: #dbe4ee; color: #171717; padding: 5px;">Harga: Rp 100.000</p>
+            </div>
+        </div>        
+        <div class="product-details">
+            <h3>Deskripsi Barang</h3>
+            <p>
+                Kaos polos berbahan cotton combat 30s adalah pakaian yang terbuat dari kain katun berkualitas tinggi dengan jenis kain cotton combat 30s. Kain cotton combat 30s adalah bahan yang kokoh dan tahan lama, sering digunakan dalam pembuatan kaos karena daya tahan dan kenyamanannya. Kaos ini memiliki desain minimalis tanpa motif atau cetakan, sehingga memberikan tampilan yang bersih dan sederhana. Kain katun combat 30s juga memberikan rasa nyaman saat dipakai dan dapat menjadi pilihan yang sempurna untuk aktivitas sehari-hari. Kaos polos ini cocok untuk berbagai kesempatan, baik digunakan sebagai pakaian sehari-hari atau sebagai alas untuk gaya busana yang lebih kreatif.
+            </p>
+            <h3>Pilih Warna</h3>
+            <div class="color-picker">
+                <div class="color-box" style="background-color: red;"></div>
+                <div class="color-box" style="background-color: green;"></div>
+                <div class="color-box" style="background-color: blue;"></div>
+                <div class="color-box" style="background-color: yellow;"></div>
+                <div class="color-box" style="background-color: orange;"></div>
+                <div class="color-box" style="background-color: purple;"></div>
+            </div>
+            <select>
+                <option value="#" disabled selected>Ukuran Baju</option>
+                <option value="option1">S</option>
+                <option value="option2">M</option>
+                <option value="option3">L</option>
+                <option value="option4">XL</option>
+            </select>
+            <div>
+                <input type="number" placeholder="Jumlah pesanan" min="1">
+            </div>
+            <div>
+                <a href="file:///Users/idea3c/project/html/tugas%20html%202/percobaan%20code%202.html">
+                    <button>Pesan Sekarang</button>
+                  </a>                  
+            </div>
+    </div>
+    
+</body>
+</html>

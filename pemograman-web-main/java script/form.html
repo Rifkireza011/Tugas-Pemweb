@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #001F3F; 
+            color: white; 
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            background-color: #337AB7; 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #5BC0DE; 
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #31B0D5; 
+        }
+
+        pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <form id="formValidation">
+        <label for="namaPelanggan">Nama Pelanggan:</label><br>
+        <input type="text" id="namaPelanggan" name="namaPelanggan" maxlength="30"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="jamKeberangkatan">Jam Keberangkatan:</label><br>
+        <input type="time" id="jamKeberangkatan" name="jamKeberangkatan"><br>
+        <label for="tujuanKeberangkatan">Tujuan Keberangkatan:</label><br>
+        <input type="text" id="tujuanKeberangkatan" name="tujuanKeberangkatan"><br>
+        <label for="jumlahTiket">Jumlah Tiket:</label><br>
+        <input type="number" id="jumlahTiket" name="jumlahTiket" min="1" max="10"><br><br>
+        <input type="submit" value="Submit">
+    </form> 
+    
+    <script>
+        const form = document.getElementById('formValidation');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            
+            
+        });
+    </script>
+</body>
+</html>
